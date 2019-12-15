@@ -42,9 +42,7 @@ public class MarketController {
         if (params.containsKey("p")) {
             pageIndex = Integer.parseInt(params.get("p")) - 1;
         }
-//
 
-//
         Pageable pageRequest = PageRequest.of(pageIndex, 5, Sort.Direction.ASC, sort);
         ItemFilter itemFilter = new ItemFilter(params);
         Page<Item> page = itemService.findAll(itemFilter.getSpec(), pageRequest);
