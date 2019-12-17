@@ -21,6 +21,7 @@ public class Category {
     private String title;
 
     @OneToMany(mappedBy = "category")
+    @JsonBackReference
     private List<Item> items;
 
     public Long getId() {
